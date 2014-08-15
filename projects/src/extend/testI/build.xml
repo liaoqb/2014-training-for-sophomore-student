@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--Copyright liaoqb-->
+<project name="mazeBug" default="all" basedir=".">
+  <target name="compile">
+    <javac srcdir="." destdir="." fork="true">
+    </javac>
+  </target>
+
+  <target name="all" depends="compile">
+    <java classname="RunnerPart2" fork="true">
+      <classpath>
+        <pathelement path="Runners/" />
+        <pathelement path="." />
+      </classpath>
+    </java>
+  </target>
+</project>

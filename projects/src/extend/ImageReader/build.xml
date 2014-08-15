@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--Copyright liaoqb-->
+<project name="bitmap" default="all" basedir=".">
+  <target name="compile">
+    <javac srcdir="." destdir="." debug="true" fork="true">
+      <classpath>
+        <pathelement path="ImageReader.jar" />
+      </classpath>
+    </javac>
+  </target>
+
+  <target name="all" depends="compile">
+    <java classname="MyImageRunner" fork="true">
+      <classpath>
+        <pathelement path="ImageReader.jar" />
+        <pathelement path="." />
+      </classpath>
+    </java>
+  </target>
+</project>

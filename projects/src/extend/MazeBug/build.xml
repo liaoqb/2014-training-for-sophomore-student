@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--Copyright liaoqb-->
+<project name="mazeBug" default="all" basedir=".">
+  <target name="compile">
+    <javac srcdir="." destdir="." fork="true">
+      <classpath>
+        <pathelement path="gridworld.jar" />
+      </classpath>
+    </javac>
+  </target>
+
+  <target name="all" depends="compile">
+    <java classname="MazeBugRunner" fork="true">
+      <classpath>
+        <pathelement path="gridworld.jar" />
+        <pathelement path="." />
+      </classpath>
+    </java>
+  </target>
+</project>
